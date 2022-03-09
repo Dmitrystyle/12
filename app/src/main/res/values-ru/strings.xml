@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Сonstruction calculator</string>
+    <string name="nav_header_title">Строительный калькулятор</string>
+    <string name="action_settings">Настройки</string>
+    <string name="menu_home">Расчет блоков</string>
+    <string name="menu_gallery">Расчет стропил</string>
+    <string name="menu_slideshow" translatable="false">Примечание</string>
+</resources>

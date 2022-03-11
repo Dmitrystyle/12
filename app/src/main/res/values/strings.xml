@@ -7,12 +7,17 @@
     <string name="nav_header_desc" translatable="false">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Block calculation</string>
-    <string name="menu_gallery">Roof calculation</string>
     <string name="menu_slideshow">Help</string>
     <string name="resalt" translatable="false">resalt</string>
     <string name="Resalt" translatable="false">Resalt</string>
     <string name="Reset" translatable="false">Reset</string>
     <string name="Enter_value_B" translatable="false">Enter_value_B</string>
     <string name="Enter_value_A" translatable="false">Enter_value_A</string>
+    <string name="menu_home">"Roof calculation "</string>
+    <string name="menu_gallery">Block calculation</string>
+    <string name="Enter_length_of_blok">Enter_length_of_blok (B)</string>
+    <string name="Enter_hight_of_blok">Enter_hight_of_blok (A)</string>
+    <string name="Enter_lenght_of_wall">Enter_lenght_of_wall (L)</string>
+    <string name="Enter_hight_of_wall">Enter_hight_of_wall(H)</string>
+    <string name="Calculation_of_the_number_of_blocks_for_the_construction_of_the_wall">Calculation of the number of blocks for the construction of the wall</string>
 </resources>

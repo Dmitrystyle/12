@@ -3,12 +3,17 @@
     <string name="app_name">Сonstruction calculator</string>
     <string name="nav_header_title">Строительный калькулятор</string>
     <string name="action_settings">Настройки</string>
-    <string name="menu_home">Расчет блоков</string>
-    <string name="menu_gallery">Расчет стропил</string>
+    <string name="menu_home">Расчет стропил</string>
     <string name="menu_slideshow" translatable="false">Примечание</string>
     <string name="nav_header_subtitle" translatable="false">"для блочных и стропильных конструкций "</string>
     <string name="resalt" translatable="false">Результат</string>
     <string name="Reset">Сброс</string>
+    <string name="menu_gallery">"Расчет блоков "</string>
+    <string name="Enter_length_of_blok">Введите длину блока</string>
+    <string name="Enter_hight_of_blok">Введите высоту блока</string>
+    <string name="Enter_lenght_of_wall">Введите длину стены</string>
+    <string name="Enter_hight_of_wall">Введите высоту стены</string>
+    <string name="Calculation_of_the_number_of_blocks_for_the_construction_of_the_wall">Расчет колличества блоков для возведения стены</string>
 
 
 </resources>

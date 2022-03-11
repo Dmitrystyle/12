@@ -73,21 +73,13 @@ class HomeFragment : Fragment() {
             if(!isFieldEmpty()) binding.resaltText.text=getResult().take(4)   //вывод результата на четыре символа
         }
 
-
         binding.button2.setOnClickListener {
 
             binding.edA.text.clear()
             binding.edB.text.clear()
             binding.resaltText.text= 0.toString()
             binding.resaltText.text.drop(4)  //обнуление
-
-
         }
-
-
-
-
-
 
     }
 

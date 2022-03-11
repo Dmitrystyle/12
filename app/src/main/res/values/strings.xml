@@ -10,4 +10,9 @@
     <string name="menu_home">Block calculation</string>
     <string name="menu_gallery">Roof calculation</string>
     <string name="menu_slideshow">Help</string>
+    <string name="resalt" translatable="false">resalt</string>
+    <string name="Resalt" translatable="false">Resalt</string>
+    <string name="Reset" translatable="false">Reset</string>
+    <string name="Enter_value_B" translatable="false">Enter_value_B</string>
+    <string name="Enter_value_A" translatable="false">Enter_value_A</string>
 </resources>

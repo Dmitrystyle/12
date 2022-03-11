@@ -7,4 +7,8 @@
     <string name="menu_gallery">Расчет стропил</string>
     <string name="menu_slideshow" translatable="false">Примечание</string>
     <string name="nav_header_subtitle" translatable="false">"для блочных и стропильных конструкций "</string>
+    <string name="resalt" translatable="false">Результат</string>
+    <string name="Reset">Сброс</string>
+
+
 </resources>

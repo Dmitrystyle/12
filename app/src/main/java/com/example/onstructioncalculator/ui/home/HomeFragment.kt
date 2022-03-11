@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.onstructioncalculator.R
 import com.example.onstructioncalculator.databinding.FragmentHomeBinding
+import kotlin.math.pow
 
 class HomeFragment : Fragment() {
 
@@ -34,10 +35,10 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+      //  val textView: TextView = binding.textHome
+      //  homeViewModel.text.observe(viewLifecycleOwner, Observer {
+      //      textView.text = it
+      //  })
         return root
     }
 
@@ -46,10 +47,48 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        binding.button.setOnClickListener {
-            binding.textExample.visibility=View.VISIBLE
-            binding.textExample.text="Hi"
+         fun getResult():String{
+            val a:Double
+            val b:Double
+            binding.apply {
+                a=edA.text.toString().toDouble()
+                b=edB.text.toString().toDouble()
+            }
+            return Math.sqrt((a.pow(2) + b.pow(2))).toString()
         }
+
+
+        fun isFieldEmpty():Boolean   //проекрка на пустое поле
+        {
+            binding.apply {
+                if(edA.text.isNullOrEmpty()) edA.error="Поле должно быть заполнено"
+                if(edB.text.isNullOrEmpty()) edB.error="Поле должно быть заполнено"
+                return  edA.text.isNullOrEmpty()||edB.text.isNullOrEmpty()
+            }
+
+        }
+
+        binding.button.setOnClickListener {
+
+            if(!isFieldEmpty()) binding.resaltText.text=getResult().take(4)   //вывод результата на четыре символа
+        }
+
+
+        binding.button2.setOnClickListener {
+
+            binding.edA.text.clear()
+            binding.edB.text.clear()
+            binding.resaltText.text= 0.toString()
+            binding.resaltText.text.drop(4)  //обнуление
+
+
+        }
+
+
+
+
+
+
     }
 
 

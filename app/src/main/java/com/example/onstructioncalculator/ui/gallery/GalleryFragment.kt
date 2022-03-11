@@ -38,6 +38,21 @@ class GalleryFragment : Fragment() {
         return root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+        binding.button2.setOnClickListener {
+            binding.textView2.visibility=View.VISIBLE
+            binding.textView2.text="Hi2"
+        }
+    }
+
+
+
+
+
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

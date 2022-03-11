@@ -19,12 +19,15 @@ class HomeFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+  //  lateinit var binding: FragmentHomeBinding
 
+
+    //______создаем_____________
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+        savedInstanceState: Bundle?    ): View? {
+
         homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)
 
@@ -37,6 +40,21 @@ class HomeFragment : Fragment() {
         })
         return root
     }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+        binding.button.setOnClickListener {
+            binding.textExample.visibility=View.VISIBLE
+            binding.textExample.text="Hi"
+        }
+    }
+
+
+
+    //----уничтожить-------
 
     override fun onDestroyView() {
         super.onDestroyView()

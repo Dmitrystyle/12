@@ -32,10 +32,10 @@ class GalleryFragment : Fragment() {
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textGallery
-        galleryViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+       // val textView: TextView = binding.textGallery
+      //  galleryViewModel.text.observe(viewLifecycleOwner, Observer {
+      //      textView.text = it
+     //   })
         return root
     }
 //___________заполняем содержимое___________________
@@ -45,20 +45,30 @@ class GalleryFragment : Fragment() {
     fun getResult():String{
         val a:Double
         val b:Double
+        val h:Double
+        val l:Double
+
+
         binding.apply {
-            a=edA.text.toString().toDouble()
-            b=edB.text.toString().toDouble()
+            a=blockL.text.toString().toDouble()
+            b=blockH.text.toString().toDouble()
+            h=wallHight.text.toString().toDouble()
+            l=wallLength.text.toString().toDouble()
+
         }
-        return Math.sqrt((a.pow(2) + b.pow(2))).toString()
+        return ((h*l)/(a*b)).toString()
     }
 
 
     fun isFieldEmpty():Boolean   //проекрка на пустое поле
     {
         binding.apply {
-            if(edA.text.isNullOrEmpty()) edA.error="Поле должно быть заполнено"
-            if(edB.text.isNullOrEmpty()) edB.error="Поле должно быть заполнено"
-            return  edA.text.isNullOrEmpty()||edB.text.isNullOrEmpty()
+            if(wallHight.text.isNullOrEmpty()) wallHight.error="Поле должно быть заполнено"
+            if(wallLength.text.isNullOrEmpty()) wallLength.error="Поле должно быть заполнено"
+            if(blockH.text.isNullOrEmpty()) blockH.error="Поле должно быть заполнено"
+            if(blockL.text.isNullOrEmpty()) blockL.error="Поле должно быть заполнено"
+
+            return  wallLength.text.isNullOrEmpty()||wallHight.text.isNullOrEmpty()||blockL.text.isNullOrEmpty()||blockH.text.isNullOrEmpty()
         }
 
     }
@@ -70,34 +80,17 @@ class GalleryFragment : Fragment() {
 
     binding.button2.setOnClickListener {
 
-        binding.edA.text.clear()
-        binding.edB.text.clear()
+        binding.wallLength.text.clear()
+        binding.wallHight.text.clear()
+        binding.blockL.text.clear()
+        binding.blockH.text.clear()
         binding.resaltText.text= 0.toString()
         binding.resaltText.text.drop(4)  //обнуление
     }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
-    }
-
-
 
 
 

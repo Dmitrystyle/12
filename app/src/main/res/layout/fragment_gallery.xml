@@ -8,7 +8,7 @@
     tools:context=".ui.gallery.GalleryFragment">
 
     <EditText
-        android:id="@+id/ed_B2"
+        android:id="@+id/wall_length"
         android:layout_width="285dp"
         android:layout_height="41dp"
         android:background="@color/white"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.731" />
 
     <EditText
-        android:id="@+id/ed_B3"
+        android:id="@+id/wall_hight"
         android:layout_width="285dp"
         android:layout_height="41dp"
         android:background="@color/white"
@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.805" />
 
     <EditText
-        android:id="@+id/ed_B"
+        android:id="@+id/block_L"
         android:layout_width="285dp"
         android:layout_height="41dp"
         android:background="@color/white"
@@ -50,7 +50,7 @@
         app:layout_constraintVertical_bias="0.659" />
 
     <EditText
-        android:id="@+id/ed_A"
+        android:id="@+id/block_h"
         android:layout_width="285dp"
         android:layout_height="41dp"
         android:background="@color/white"
@@ -72,9 +72,9 @@
         android:gravity="center_horizontal|center_vertical"
         android:text="@string/resalt"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/ed_A"
-        app:layout_constraintEnd_toEndOf="@+id/ed_A"
-        app:layout_constraintStart_toStartOf="@+id/ed_A" />
+        app:layout_constraintBottom_toTopOf="@+id/block_h"
+        app:layout_constraintEnd_toEndOf="@+id/block_h"
+        app:layout_constraintStart_toStartOf="@+id/block_h" />
 
     <Button
         android:id="@+id/button"
@@ -83,10 +83,10 @@
         android:layout_marginTop="112dp"
         android:onClick="onClickResult"
         android:text="@string/Resalt"
-        app:layout_constraintEnd_toEndOf="@+id/ed_B"
+        app:layout_constraintEnd_toEndOf="@+id/block_L"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/ed_B"
-        app:layout_constraintTop_toBottomOf="@+id/ed_B" />
+        app:layout_constraintStart_toStartOf="@+id/block_L"
+        app:layout_constraintTop_toBottomOf="@+id/block_L" />
 
     <Button
         android:id="@+id/button2"
@@ -96,10 +96,10 @@
         android:onClick="onClicReset"
         android:text="@string/Reset"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/ed_B"
+        app:layout_constraintEnd_toEndOf="@+id/block_L"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/ed_B"
-        app:layout_constraintTop_toBottomOf="@+id/ed_B"
+        app:layout_constraintStart_toStartOf="@+id/block_L"
+        app:layout_constraintTop_toBottomOf="@+id/block_L"
         app:layout_constraintVertical_bias="0.791" />
 
     <TextView
